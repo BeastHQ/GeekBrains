@@ -17,16 +17,28 @@ int x_2 = 3;
 int y_2 = 4;
 int divisor = 1;
 
+float mass_index(int w, float h)
+{
+  return (WEIGHT / (HEIGHT * HEIGHT));
+}
+
+void swap(int *a, int *b)
+{
+  *a ^= *b;
+  *b ^= *a;
+  *a ^= *b;
+}
+
 int even(int x)
 {
   if (x % 2 == 0) return 0;
   else return 1;
 }
 
-int black_or_white(int x, int y)
+void matching_tiles(int x_1, int y_1, int x_2, int y_2)
 {
-  if (even(x) == even(y)) return 1;
-  else return 0;
+  if ((even(x_1) == even(y_1)) == (even(x_2) == even(y_2))) printf("Tiles are matching!\n");
+  else printf("Tiles aren't matching!\n");
 }
 
 int size(int x)
