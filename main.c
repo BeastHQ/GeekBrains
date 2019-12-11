@@ -2,13 +2,10 @@
 
 int main() {
   // 1st task
-  float mass_index = WEIGHT / (HEIGHT * HEIGHT);
-  printf("%f\n", mass_index);
+  printf("%f\n", mass_index(WEIGHT, HEIGHT));
   //2nd task
   printf("%d %d -> ", a, b);
-  a ^= b;
-  b ^= a;
-  a ^= b;
+  swap(&a, &b);
   printf("%d %d\n", a, b);
 
   //3rd task
@@ -34,11 +31,9 @@ int main() {
   else printf("лет!\n");
 
   //5th task
-  if (black_or_white(x_1, y_1) == black_or_white(x_2, y_2)) printf("Tiles are matching!\n");
-  else printf("Tiles aren't matching!\n");
+  matching_tiles(x_1, y_1, x_2, y_2);
 
   //6th task
-
   for (int i = 0; i < size(NUMBER) - 1; i++)
   {
     divisor *= 10;
